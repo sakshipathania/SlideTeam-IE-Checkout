@@ -161,8 +161,8 @@ public class SignUp_Step extends SetupClass {
 		js.executeScript("arguments[0].scrollIntoView();", dwnd_btn);
 		 dwnd_btn.click();
 		Thread.sleep(3000);
-	   driver.get("https://www.slideteam.net/");
-	   Thread.sleep(3000);
+	  // driver.get("https://www.slideteam.net/");
+	   //Thread.sleep(3000);
 	}
 
 	@Then("^user delete the new account created cd$")
