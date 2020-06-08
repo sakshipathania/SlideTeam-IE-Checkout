@@ -19,7 +19,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import webApp.PerformAction;
 
-public class 2CO_Checkout extends SetupClass {
+public class CO_Checkout extends SetupClass {
 
 	//PerformAction wait = new PerformAction();
   WebDriverWait wait = new WebDriverWait(driver,10);
