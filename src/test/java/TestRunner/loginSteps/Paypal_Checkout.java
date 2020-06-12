@@ -21,7 +21,7 @@ import webApp.PerformAction;
 
 public class Paypal_Checkout extends SetupClass {
 
-	WebDriverWait wait = new WebDriverWait(driver,100);
+	WebDriverWait wait = new WebDriverWait(driver,20);
         //PerformAction wait = new PerformAction();
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	Random rad = new Random();
