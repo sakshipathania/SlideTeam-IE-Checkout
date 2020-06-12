@@ -224,8 +224,8 @@ public class SignUp_Step extends SetupClass {
 			js.executeScript("arguments[0].scrollIntoView();",Down_load);
 			Down_load.click();
 		Thread.sleep(3000);
-	   driver.get("https://www.slideteam.net/");
-	   Thread.sleep(3000);
+	  // driver.get("https://www.slideteam.net/");
+	//   Thread.sleep(3000);
 		}
 		catch( NoSuchElementException popup) {
 		}
