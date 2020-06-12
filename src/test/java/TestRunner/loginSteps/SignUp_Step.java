@@ -206,6 +206,7 @@ public class SignUp_Step extends SetupClass {
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(2000);
 		WebElement free_ppt_btn= driver.findElement(By.xpath("//a[contains(.,'Free PPTs')]"));
+		js.executeScript("arguments[0].scrollIntoView();",free_ppt_btn);
 		Thread.sleep(2000);
 	    free_ppt_btn.click();
 	    Thread.sleep(2000);
