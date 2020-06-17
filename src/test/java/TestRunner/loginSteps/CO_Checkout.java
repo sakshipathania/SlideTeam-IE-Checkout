@@ -111,36 +111,36 @@ public class CO_Checkout extends SetupClass {
 				
 
 				Thread.sleep(2000);
-			    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("email_address")));
+			    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#email_address")));
 				Thread.sleep(2000);
 			    new_email_signup.sendKeys(full_email);
 				Thread.sleep(2000);
 				
 				// enter name
 
-			    WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("firstname")));
+			    WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#firstname")));
 				Thread.sleep(2000);
 			    new_fname_signup.sendKeys("Selenium");
 				Thread.sleep(2000);
 
-			    WebElement new_lname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("lastname")));
+			    WebElement new_lname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#lastname")));
 				Thread.sleep(2000);
 			    new_lname_signup.sendKeys("Testing");
 				Thread.sleep(2000);
 				
 				//enter password
-				 WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password")));
+				 WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#password")));
 					Thread.sleep(2000);
 				    new_pwd_signup.sendKeys("selenium@123");
 					Thread.sleep(2000);
 
-				    WebElement new_pwd1_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password-confirmation")));
+				    WebElement new_pwd1_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#password-confirmation")));
 					Thread.sleep(2000);
 				    new_pwd1_signup.sendKeys("selenium@123");
 					Thread.sleep(2000);
 					
 					// enter captcha
-					WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("captcha_user_create")));
+					WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#captcha_user_create")));
 					Thread.sleep(2000);
 				    new_captcha_signup.sendKeys("Aj7W2mtf9namwf55");
 					Thread.sleep(2000);
