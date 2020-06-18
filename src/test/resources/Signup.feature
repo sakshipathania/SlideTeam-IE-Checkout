@@ -6,4 +6,4 @@ Given Navigates to website url.
 	Then Creating new account
 	Then After signup see the price page
 	Then user will download a free product cd
-	Then User Logout
+	Then user deleted the account
