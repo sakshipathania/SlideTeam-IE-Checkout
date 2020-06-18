@@ -231,60 +231,9 @@ public class SignUp_Step extends SetupClass {
 		}
 	}
 
-	/*@Then("^user wants to delete the new account created cd$")
-	public void user_wants_to_delete_the_new_account_created_cd() throws InterruptedException  {
-
-		 WebElement My_Account= driver.findElement(By.xpath("//a[contains(text(),'My Account')]"));
-		js.executeScript("arguments[0].scrollIntoView();",My_Account);
-		 Thread.sleep(1000);
-		 My_Account.click();
-		
-
-
-                   try {
-			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
-			if(iframe.isDisplayed()) {
-				driver.switchTo().frame(iframe);   
-				 Actions act = new Actions(driver);
-				 act.moveToElement(driver.findElement(By.cssSelector("#title .icon-minimize"))).build().perform();
-				 Thread.sleep(2000);
-					WebElement chat1=driver.findElement(By.cssSelector("#title .icon-minimize"));
-					 Thread.sleep(1000);
-						chat1.click();
-						 Thread.sleep(1000);
-						 driver.switchTo().defaultContent();
-						 Thread.sleep(1000);
-						 driver.switchTo().parentFrame();
-					 Thread.sleep(1000);
-			}
-			else {
-				
-
-			System.out.println("chat window does not open");
-			}
-		}
-				catch(NoSuchElementException NCP) {
-					
-				}
-
-                 try {
-		 WebElement delete_account = driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]"));
-		 js.executeScript("arguments[0].scrollIntoView();",delete_account);
-			 delete_account.click();
-		 Thread.sleep(3000);
-		 } catch(NoSuchElementException acc) {
-		 }
-	         try {
-		 WebElement continue_delete = driver.findElement(By.xpath("//button[@type='submit'][contains(.,'Continue')]"));
-		 js.executeScript("arguments[0].scrollIntoView();",continue_delete); 
-			 continue_delete.click();
-		 Thread.sleep(3000);
-		 } catch(NoSuchElementException del) {
-		 }
 	
-      } */
         	@Then("^User Logout\\.$")
-            public void user_Logout() throws Throwable {
+            public void User_Logout() throws Throwable {
      	  Thread.sleep(3000);
     	    
   	 driver.findElement(By.xpath("//a[contains(.,'Sign Out')]")).click();
