@@ -231,7 +231,7 @@ public class SignUp_Step extends SetupClass {
 		}
 	}
 
-	@Then("^user wants to delete the new account created cd$")
+	/*@Then("^user wants to delete the new account created cd$")
 	public void user_wants_to_delete_the_new_account_created_cd() throws InterruptedException  {
 
 		 WebElement My_Account= driver.findElement(By.xpath("//a[contains(text(),'My Account')]"));
@@ -282,5 +282,13 @@ public class SignUp_Step extends SetupClass {
 		 } catch(NoSuchElementException del) {
 		 }
 	
-      }
+      } */
+        	@Then("^User Logout\\.$")
+            public void user_Logout() throws Throwable {
+     	  Thread.sleep(3000);
+    	    
+  	 driver.findElement(By.xpath("//a[contains(.,'Sign Out')]")).click();
+ 	 Thread.sleep(3000);
+	 
+}
 }
