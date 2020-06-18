@@ -42,6 +42,7 @@ public class SetupClass {
 			caps.setCapability("ignoreZoomSetting", true);
 			caps.setCapability("nativeEvents",false);
 			driver = new InternetExplorerDriver(caps);
+			driver.manage().window().maximize();
 		} else {
 			System.out.println("IE11 browser does not open");
 		}
