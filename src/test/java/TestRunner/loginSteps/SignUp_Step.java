@@ -220,7 +220,7 @@ public class SignUp_Step extends SetupClass {
 		try {
 		driver.findElement(By.cssSelector("li.item:nth-child(8) > div:nth-child(1) > div:nth-child(2) > strong:nth-child(1) > span:nth-child(1) > a:nth-child(1)")).click();
 		Thread.sleep(3000);
-		WebElement Down_load= driver.findElement(By.cssSelector("#clicking"));
+		WebElement Down_load= driver.findElement(By.xpath("//*[@id='clicking']"));
 			js.executeScript("arguments[0].scrollIntoView();",Down_load);
 			Down_load.click();
 		Thread.sleep(3000);
