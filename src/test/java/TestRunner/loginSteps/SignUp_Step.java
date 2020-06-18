@@ -232,12 +232,57 @@ public class SignUp_Step extends SetupClass {
 	}
 
 	
-        	@Then("^User Logout\\.$")
-            public void User_Logout() throws Throwable {
-     	  Thread.sleep(3000);
-    	    
-  	 driver.findElement(By.xpath("//a[contains(.,'Sign Out')]")).click();
- 	 Thread.sleep(3000);
-	 
-}
+        	@Then("^user deleted the account$")
+	public void user_deleted_the_account() throws Throwable {
+		Thread.sleep(3000);
+	    driver.get("https://www.slideteam.net/");
+		Thread.sleep(2000);
+		
+
+		 driver.findElement(By.xpath("//a[contains(text(),'My Account')]")).click();
+		 Thread.sleep(3000);
+		 
+		
+
+
+try {
+			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
+			if(iframe.isDisplayed()) {
+				driver.switchTo().frame(iframe);   
+				 Actions act = new Actions(driver);
+				 act.moveToElement(driver.findElement(By.cssSelector("#title .icon-minimize"))).build().perform();
+				 Thread.sleep(2000);
+					WebElement chat1=driver.findElement(By.cssSelector("#title .icon-minimize"));
+					 Thread.sleep(1000);
+						chat1.click();
+						 Thread.sleep(1000);
+						 driver.switchTo().defaultContent();
+						 Thread.sleep(1000);
+						 driver.switchTo().parentFrame();
+					 Thread.sleep(1000);
+			}
+			else {
+				
+
+			System.out.println("chat window does not open");
+			}
+		}
+				catch(NoSuchElementException NCP) {
+					
+				}
+
+
+      
+		 WebElement delete_account = driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]"));
+		js.executeScript("arguments[0].scrollIntoView();",delete_account);
+		 delete_account.click();
+		 Thread.sleep(3000);
+		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Continue')]")));
+		js.executeScript("arguments[0].scrollIntoView();",continue_delete);
+		continue_delete.click();
+		 Thread.sleep(3000);
+	}
+
+
+	
 }
