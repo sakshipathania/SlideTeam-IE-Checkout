@@ -2,6 +2,8 @@ package TestRunner.loginSteps;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+import java.awt.Robot; 
+import java.awt.event.KeyEvent;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -12,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import ObjectRepository.SignupObject;
 import TestRunner.SetupClass;
@@ -224,6 +227,11 @@ public class SignUp_Step extends SetupClass {
 			js.executeScript("arguments[0].scrollIntoView();",Down_load);
 			Down_load.click();
 		Thread.sleep(3000);
+			//Close the dialog box
+			Robot r = new Robot(); 
+		r.keyPress(KeyEvent.VK_ESCAPE); 
+		r.keyRelease(KeyEvent.VK_ESCAPE);
+			
 	  // driver.get("https://www.slideteam.net/");
 	//   Thread.sleep(3000);
 		}
