@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.awt.Robot; 
 import java.awt.event.KeyEvent;
+import java.awt.AWTException;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -231,7 +232,11 @@ public class SignUp_Step extends SetupClass {
 		}
 		catch( NoSuchElementException popup) {
 		}
+	}
 		//Close the dialog box
+      @Then("^close the dialog box")
+		public void close_the_dialog_box() throws AWTException 
+		{
 			Robot r = new Robot(); 
 		r.keyPress(KeyEvent.VK_ESCAPE); 
 		r.keyRelease(KeyEvent.VK_ESCAPE);
