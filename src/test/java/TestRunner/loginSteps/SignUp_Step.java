@@ -227,16 +227,14 @@ public class SignUp_Step extends SetupClass {
 			js.executeScript("arguments[0].scrollIntoView();",Down_load);
 			Down_load.click();
 		Thread.sleep(3000);
-			//Close the dialog box
-			Robot r = new Robot(); 
-		r.keyPress(KeyEvent.VK_ESCAPE); 
-		r.keyRelease(KeyEvent.VK_ESCAPE);
-			
-	  // driver.get("https://www.slideteam.net/");
-	//   Thread.sleep(3000);
+		
 		}
 		catch( NoSuchElementException popup) {
 		}
+		//Close the dialog box
+			Robot r = new Robot(); 
+		r.keyPress(KeyEvent.VK_ESCAPE); 
+		r.keyRelease(KeyEvent.VK_ESCAPE);
 	}
 
 	
