@@ -111,7 +111,7 @@ public class CO_Checkout extends SetupClass {
 				
 
 				Thread.sleep(2000);
-			    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#email_address")));
+			    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='email_address']")));
 				Thread.sleep(2000);
 			    new_email_signup.sendKeys(full_email);
 				Thread.sleep(2000);
