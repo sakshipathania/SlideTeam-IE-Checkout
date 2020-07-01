@@ -577,11 +577,11 @@ public class Paypal_Checkout extends SetupClass {
 		 Thread.sleep(3000);
 		
 
-		 WebElement delete_account = driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]"));
+		WebElement delete_account = driver.findElement(By.xpath("/html/body/div[2]/main/div/div[2]/div[2]/div[2]/ul/li/a"));
 		js.executeScript("arguments[0].scrollIntoView();",delete_account);
 		 delete_account.click();
 		 Thread.sleep(3000);
-		 WebElement continue_delete = driver.findElement(By.xpath("//button[@type='submit'][contains(.,'Continue')]"));
+		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='deleteaccount-form']/button[1]")));
 		js.executeScript("arguments[0].scrollIntoView();",continue_delete); 
 		 continue_delete.click();
 		 Thread.sleep(3000);
