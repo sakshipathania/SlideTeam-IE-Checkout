@@ -520,6 +520,7 @@ public class Paypal_Checkout extends SetupClass {
 		    
 		    popupWindowHandle = handle;
 		    driver.switchTo().window(popupWindowHandle);
+			    driver.manage().window().maximize();
 		   }
 		  }
 		  
