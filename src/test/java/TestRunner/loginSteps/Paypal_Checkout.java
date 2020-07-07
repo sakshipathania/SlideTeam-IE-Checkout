@@ -25,13 +25,12 @@ public class Paypal_Checkout extends SetupClass {
         //PerformAction wait = new PerformAction();
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	Random rad = new Random();
-	driver.manage().timeouts().pageLoadTimeout(70, TimeUnit.SECONDS);
-	
+		
 	@Given("^user is already on Website Home Page pp$")
 	public void user_is_already_on_Website_Home_Page_pp() throws Throwable {
 		
 		driver.get(AppURL);
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(70, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
 	    Thread.sleep(2000);
 	    try {
