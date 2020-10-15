@@ -6,8 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
-import org.testng.ITestResult;
 import TestRunner.SetupClass;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -18,11 +16,11 @@ import cucumber.api.java.After;
 		WebDriver driver=null;
 		
 		
-		public void onTestFailure(ITestResult result) {
+		public void onTestFailure(String result) {
          	System.out.println("***** Error "+result.getName()+" test has failed *****");
     	        String methodName = result.getName().toString().trim();
-                 ITestContext context = result.getTestContext();
-                 WebDriver driver = (WebDriver)context.getAttribute("driver");
+                // ITestContext context = result.getTestContext();
+                // WebDriver driver = (WebDriver)context.getAttribute("driver");
     	         TakesScreenShot(methodName, driver);
     }
 		@After
