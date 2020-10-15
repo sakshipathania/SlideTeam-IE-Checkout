@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
+import org.testng.ITestResult;
 import TestRunner.SetupClass;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -19,10 +20,10 @@ import cucumber.api.java.After;
 		
 		public void onTestFailure(ITestResult result) {
          	System.out.println("***** Error "+result.getName()+" test has failed *****");
-    	        String methodName=result.getName().toString().trim();
+    	        String methodName = result.getName().toString().trim();
                  ITestContext context = result.getTestContext();
                  WebDriver driver = (WebDriver)context.getAttribute("driver");
-    	         takeScreenShot(methodName, driver);
+    	         TakesScreenShot(methodName, driver);
     }
 		@After
 		
