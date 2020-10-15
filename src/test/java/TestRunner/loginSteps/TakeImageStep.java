@@ -23,11 +23,8 @@ import cucumber.api.java.After;
 		      File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(scrFile, new File(filePath+".png"));
 			System.out.println("***Placed screen shot in "+filePath+" ***");
-			} catch (IOException e) {
-				e.printStackTrace();
+	
 			}
-			    
-		      //scenario.embed(screenshot, "image/png");
 		    }
 		}
-	}
+	
