@@ -13,7 +13,7 @@ import TestRunner.SetupClass;
 
 
 	public class TakeImageStep extends SetupClass {
-		String filePath = "C:\\SCREENSHOTS";
+		String filePath = "C:\SCREENSHOTS";
 		
 		@After
 		
