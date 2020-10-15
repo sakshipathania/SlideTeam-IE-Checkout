@@ -11,12 +11,16 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.pack.sample.TestBase;
+import TestRunner.SetupClass;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
 
-public class TestListener implements ITestListener {
+
+	public class TakeImageStep extends SetupClass {
 	WebDriver driver=null;
 	String filePath = "C:\\SCREENSHOTS";
     @Override
+    @Given("^onTestFailure")
     public void onTestFailure(ITestResult result) {
     	System.out.println("***** Error "+result.getName()+" test has failed *****");
     	String methodName=result.getName().toString().trim();
@@ -24,7 +28,7 @@ public class TestListener implements ITestListener {
        WebDriver driver = (WebDriver)context.getAttribute("driver");
     	takeScreenShot(methodName, driver);
     }
-    
+    @Then("^takeScreenShot")
     public void takeScreenShot(String methodName, WebDriver driver) {
     	 File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
          //The below method will save the screen shot in d drive with test method name 
