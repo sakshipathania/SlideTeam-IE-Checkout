@@ -28,9 +28,9 @@ import TestRunner.SetupClass;
 			System.out.println("***Placed screen shot in "+filePath+" ***");
 	
 			} catch (Exception e)
-                        {
-                    } 
+                        { } 
+                   
  
 		    }
 		}
-	
+	}
