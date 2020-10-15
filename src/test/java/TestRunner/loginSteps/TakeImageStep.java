@@ -14,13 +14,20 @@ import cucumber.api.java.After;
 
 	public class TakeImageStep extends SetupClass {
 		String filePath = "C:\\SCREENSHOTS";
-		@After
-		public void tearDown(Scenario scenario) {
-			System.out.println("***** Error "+result.getName()+" test has failed *****");
+		WebDriver driver=null;
+		
+		
+		public void onTestFailure(ITestResult result) {
+         	System.out.println("***** Error "+result.getName()+" test has failed *****");
     	        String methodName=result.getName().toString().trim();
-               ITestContext context = result.getTestContext();
-               WebDriver driver = (WebDriver)context.getAttribute("driver");
-    	       takeScreenShot(methodName, driver);
+                 ITestContext context = result.getTestContext();
+                 WebDriver driver = (WebDriver)context.getAttribute("driver");
+    	         takeScreenShot(methodName, driver);
+    }
+		@After
+		
+		public void tearDown(Scenario scenario) {
+			
 		    if (scenario.isFailed()) {	    	
 		      log.info("Scenario failed, now taking screenshot");
 		      File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
