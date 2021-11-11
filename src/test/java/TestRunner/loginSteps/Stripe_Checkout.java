@@ -680,10 +680,18 @@ public class Stripe_Checkout extends SetupClass {
 		    place_order_btn.click();
 			Thread.sleep(5000);
 			
-			WebElement error_message= driver.findElement(By.cssSelector("#checkout > div.messages > div > div"));
-								     Thread.sleep(3000);
-			System.out.println("Please verify your Card details");
-								     Thread.sleep(2000);
+			String co_page_title = driver.getTitle();
+		Thread.sleep(3000);
+		System.out.println("Title of the Page is --> " + co_page_title);
+
+		String ErrorMessage = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
+				"//div[@id='checkout']//div[@data-ui-id='checkout-cart-validationmessages-message-error'][normalize-space()='Please verify you card information.']")))
+				.getText();
+		// verify the error meaasge
+		Assert.assertTrue("user is on wrong page", ErrorMessage.contains("Please verify you card information."));
+		
+		//verify the Title
+		Assert.assertTrue("user is on wrong page", co_page_title.contentEquals("Checkout"));
 								  
 		} catch (NoSuchElementException popup) {
 		}
