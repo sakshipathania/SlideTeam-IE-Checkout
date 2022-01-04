@@ -28,8 +28,13 @@ public class Stripe_Checkout extends SetupClass {
 		driver.get(AppURL);
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
-	    Thread.sleep(2000);
-	    try {
+	        Thread.sleep(2000);
+	    
+		driver.manage().deleteAllCookies();
+		Thread.sleep(4000); // wait 4 seconds to clear cookies.
+		driver.navigate().refresh();
+		Thread.sleep(2000);
+	   /* try {
 			WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
 			if (logout.isEnabled()) {
 				logout.click();
@@ -65,7 +70,7 @@ public class Stripe_Checkout extends SetupClass {
 		}
 				catch(NoSuchElementException NCP) {
 					
-				}
+				}*/
 		Thread.sleep(1000);
 	    
 	    
