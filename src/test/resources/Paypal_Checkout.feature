@@ -1,4 +1,4 @@
-@Stripe_checkout
+@paypal_Checkout
 Feature:  Stripe Checkout
 Scenario: Test Stripe checkout
 
