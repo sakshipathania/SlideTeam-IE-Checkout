@@ -12,6 +12,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -44,7 +45,11 @@ public class SetupClass {
 		if (property.getProperty("edge").equals("yes")) {
 
 			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+			EdgeOptions options = new EdgeOptions();
+			options.setBinary("C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe");
+
+			driver = new EdgeDriver(options);
+			//driver.get("google.com");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
@@ -63,7 +68,7 @@ public class SetupClass {
 	@AfterClass
 	public static void after_Class() {
 		try {
-			driver.quit();
+			//driver.quit();
 			Thread.sleep(2000);
 		} catch (Exception closeBrowser) {
 
