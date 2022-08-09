@@ -1,6 +1,6 @@
 @paypal_Checkout
-Feature:  Stripe Checkout
-Scenario: Test Stripe checkout
+Feature:  paypal Checkout
+Scenario: paypal checkout
 
 Given user is already on Website Home Page 2CO
 Then user navigates to sign up page 2CO
