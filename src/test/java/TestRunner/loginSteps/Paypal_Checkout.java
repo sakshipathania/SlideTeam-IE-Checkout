@@ -22,8 +22,8 @@ public class Paypal_Checkout extends SetupClass {
 
 
 
-	@Given("^user is already on Website Home Page pp$")
-	public void user_is_already_on_Website_Home_Page_pp() throws Throwable {
+	@Given("^USER is already on Website Home Page pp$")
+	public void USER_is_already_on_Website_Home_Page_pp() throws Throwable {
 
 		driver.get(AppURL);
 		
@@ -66,20 +66,20 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user navigates to sign up page pp$")
-	public void user_navigates_to_sign_up_page_pp() throws Throwable {
+	@Then("^USER navigates to sign up page pp$")
+	public void USER_navigates_to_sign_up_page_pp() throws Throwable {
 		Thread.sleep(3000);
 		try {
 			driver.findElement(By.cssSelector("ul.header > li:nth-child(1) > a:nth-child(1)")).click();
 			// driver.get("https://www.slideteam.net/customer/account/login/referer/aHR0cHM6Ly93d3cuc2xpZGV0ZWFtLm5ldC9jdXN0b21lci9hY2NvdW50L2luZGV4Lw%2C%2C/");
 			Thread.sleep(2000);
-			log.info("It's opening the website URL and redirect user to sign up page");
+			log.info("It's opening the website URL and redirect USER to sign up page");
 		} catch (NoSuchElementException popup) {
 		}
 	}
 
-	@Then("^user create a new ac count pp$")
-	public void user_create_a_new_ac_count_pp() throws Throwable {
+	@Then("^USER create a new ac count pp$")
+	public void USER_create_a_new_ac_count_pp() throws Throwable {
 
 		// create new email for sign up
 
@@ -138,7 +138,7 @@ public class Paypal_Checkout extends SetupClass {
 
 		/*
 		 * // enter captcha WebElement new_captcha_signup = wait
-		 * .until(ExpectedConditions.elementToBeClickable(By.id("captcha_user_create")))
+		 * .until(ExpectedConditions.elementToBeClickable(By.id("captcha_USER_create")))
 		 * ; Thread.sleep(2000); new_captcha_signup.sendKeys("Aj7W2mtf9namwf55");
 		 * Thread.sleep(2000);
 		 */
@@ -167,8 +167,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text1 PP1$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text1_PP1() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text1 PP1$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text1_PP1() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -191,8 +191,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text2 PP2$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text2_PP2() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text2 PP2$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text2_PP2() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -214,8 +214,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 
-	@Then("^user is redirected to pricing page and check the text3 PP3$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text3_PP3() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text3 PP3$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text3_PP3() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -237,8 +237,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 
-	@Then("^user is redirected to pricing page and check the text4 PP4$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text4_PP4() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text4 PP4$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text4_PP4() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -260,8 +260,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 
-	@Then("^user is redirected to pricing page and check the text5 PP5$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text5_PP5() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text5 PP5$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text5_PP5() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -283,8 +283,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 
-	@Then("^user is redirected to pricing page and check the text6 PP6$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text6_PP6() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text6 PP6$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text6_PP6() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -306,8 +306,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(2000);
 	}
 
-	@Then("^user is redirected to pricing page and check the text7 PP7$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text7_PP7() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text7 PP7$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text7_PP7() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -329,8 +329,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(2000);
 	}
 
-	@Then("^user is redirected to pricing page and check the text8 PP8$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text8_PP8() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text8 PP8$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text8_PP8() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -352,8 +352,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(5000);
 	}
 
-	@Then("^user is redirected to pricing page and check the text9 PP9$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text9_PP9() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text9 PP9$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text9_PP9() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -366,10 +366,10 @@ public class Paypal_Checkout extends SetupClass {
 		Business_Team.click();
 		Thread.sleep(3000);
 
-		String actualTitle = "Annual 4 User License";
+		String actualTitle = "Annual 4 user License";
 		Thread.sleep(1000);
 		// wait.implictywait(driver);
-		String expectedTitle = "Annual 4 User License";
+		String expectedTitle = "Annual 4 user License";
 		Thread.sleep(1000);
 		// wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
@@ -382,8 +382,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text10 PP0$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text10_PP0() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text10 PP0$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text10_PP0() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -411,8 +411,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text11 PP0$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text11_PP0() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text11 PP0$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text11_PP0() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -424,15 +424,15 @@ public class Paypal_Checkout extends SetupClass {
 		Business_Team.click();
 		Thread.sleep(3000);
 
-		String actualTitle = "Annual 20 User License";
+		String actualTitle = "Annual 20 USER License";
 		Thread.sleep(1000);
 		// wait.implictywait(driver);
-		String expectedTitle = "Annual 20 User License";
+		String expectedTitle = "Annual 20 USER License";
 		Thread.sleep(1000);
 		// wait.implictywait(driver);
 		Assert.assertEquals(expectedTitle, actualTitle);
 		Thread.sleep(2000);
-		js.executeScript("alert('Text Annual 20 User License is present and correct');");
+		js.executeScript("alert('Text Annual 20 USER License is present and correct');");
 		Thread.sleep(3000);
 		driver.switchTo().alert().accept();
 		// wait.implictywait(driver);
@@ -440,8 +440,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text12 PP0$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text12_PP0() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text12 PP0$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text12_PP0() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -469,8 +469,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text13 PP0$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text13_PP0() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text13 PP0$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text13_PP0() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -498,8 +498,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text14 PP0$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text14_PP0() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text14 PP0$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text14_PP0() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -527,8 +527,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text15 PP0$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text15_PP0() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text15 PP0$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text15_PP0() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -540,7 +540,7 @@ public class Paypal_Checkout extends SetupClass {
 		Education.click();
 		Thread.sleep(3000);
 
-		String actualTitle = "Annual 15 User Education License";
+		String actualTitle = "Annual 15 USER Education License";
 		Thread.sleep(1000);
 		// wait.implictywait(driver);
 		String expectedTitle = "Annual 15 User Education License";
@@ -556,8 +556,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text16 PP0$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text16_PP0() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text16 PP0$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text16_PP0() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -585,8 +585,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text17 PP0$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text17_PP0() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text17 PP0$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text17_PP0() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -614,8 +614,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and check the text18 PP0$")
-	public void user_is_redirected_to_pricing_page_and_check_the_text18_PP0() throws Throwable {
+	@Then("^USER is redirected to pricing page and check the text18 PP0$")
+	public void USER_is_redirected_to_pricing_page_and_check_the_text18_PP0() throws Throwable {
 		Thread.sleep(7000);
 		driver.get("https://www.slideteam.net/pricing");
 		Thread.sleep(4000);
@@ -643,8 +643,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to pricing page and choose a plan to pay pp$")
-	public void user_is_redirected_to_pricing_page_and_choose_a_plan_to_pay_pp() throws Throwable {
+	@Then("^USER is redirected to pricing page and choose a plan to pay pp$")
+	public void USER_is_redirected_to_pricing_page_and_choose_a_plan_to_pay_pp() throws Throwable {
 
 		driver.get(
 				"https://www.slideteam.net/pricing?utm_expid=.ob6CI18MTrailD_9AQRC-g.0&utm_referrer=https%3A%2F%2Fwww.slideteam.net%2Fpricing");
@@ -659,8 +659,8 @@ public class Paypal_Checkout extends SetupClass {
 
 	}
 
-	@Then("^user is redirected to checkout page pp$")
-	public void user_is_redirected_to_checkout_page_pp() throws Throwable {
+	@Then("^USER is redirected to checkout page pp$")
+	public void USER_is_redirected_to_checkout_page_pp() throws Throwable {
 		Thread.sleep(2000);
 		try {
 			// WebElement cp_btn =
@@ -685,8 +685,8 @@ public class Paypal_Checkout extends SetupClass {
 		Thread.sleep(1000);
 	}
 
-	@Then("^user proceed to pay with paypal pp$")
-	public void user_proceed_to_pay_with_paypal_pp() throws Throwable {
+	@Then("^USER proceed to pay with paypal pp$")
+	public void USER_proceed_to_pay_with_paypal_pp() throws Throwable {
 		Thread.sleep(2000);
 
 		// place order button
@@ -725,13 +725,13 @@ public class Paypal_Checkout extends SetupClass {
 		}
 	}
 
-	@Then("^paypal popup appears and user navigates back to my account pp$")
-	public void paypal_popup_appears_and_user_navigates_back_to_my_account_pp() throws Throwable {
+	@Then("^paypal popup appears and USER navigates back to my account pp$")
+	public void paypal_popup_appears_and_USER_navigates_back_to_my_account_pp() throws Throwable {
 
 		driver.manage().window().maximize();
 		String mainWindow = driver.getWindowHandle();
 
-		System.out.println("user is on mainWindow ------" + mainWindow);
+		System.out.println("USER is on mainWindow ------" + mainWindow);
 		// It returns no. of windows opened by WebDriver and will return Set of Strings
 		Thread.sleep(4000);
 		Set<String> set = driver.getWindowHandles();
@@ -745,7 +745,7 @@ public class Paypal_Checkout extends SetupClass {
 
 			System.out.println("set size = " + set.size());
 			if (!mainWindow.equals(childWindow)) {
-				System.out.println("user is on mainWindow ------" + childWindow);
+				System.out.println("USER is on mainWindow ------" + childWindow);
 				driver.switchTo().window(childWindow);
 				System.out.println("Title = " + driver.getTitle());
 
@@ -762,8 +762,8 @@ public class Paypal_Checkout extends SetupClass {
 		driver.switchTo().window(mainWindow);
 	}
 
-	@Then("^user deleted the account pp$")
-	public void user_deleted_the_account_pp() throws Throwable {
+	@Then("^USER deleted the account pp$")
+	public void USER_deleted_the_account_pp() throws Throwable {
 
 		Thread.sleep(3000);
 		WebElement account = driver.findElement(By.xpath("//a[contains(.,'My Account')]"));
