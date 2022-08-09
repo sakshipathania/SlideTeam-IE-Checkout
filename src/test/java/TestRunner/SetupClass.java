@@ -45,10 +45,14 @@ public class SetupClass {
 		if (property.getProperty("edge").equals("yes")) {
 
 			WebDriverManager.edgedriver().setup();
-			EdgeOptions options = new EdgeOptions();
-			options.setBinary("C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe");
+			/*
+			 * EdgeOptions options = new EdgeOptions(); options.
+			 * setBinary("C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+			 * );
+			 */
 
-			driver = new EdgeDriver(options);
+			//driver = new EdgeDriver(options);
+			driver = new EdgeDriver();
 			//driver.get("google.com");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
