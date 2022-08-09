@@ -1,7 +1,7 @@
 package TestRunner;
 
 import java.io.FileReader;
-
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -28,6 +28,7 @@ public class SetupClass {
 	public static String local_IE11;
 	protected static WebDriverWait wait;
 	protected static JavascriptExecutor js;
+
 	@BeforeClass
 	public static void before_Class() throws Exception {
 
@@ -40,24 +41,14 @@ public class SetupClass {
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
 
-		// if (browser.equalsIgnoreCase("IE11"))
-		if ((local_IE11.equals("yes"))) {
-			/*** To run desktop project on local */
-			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-			caps.setCapability("ignoreZoomSetting", true);
-			caps.setCapability("nativeEvents", false);
-			driver = new InternetExplorerDriver(caps);
-			driver.manage().window().maximize();
-		} else if (property.getProperty("edge").equals("yes")) {
-			
-			 WebDriverManager.edgedriver().setup();
+		if (property.getProperty("edge").equals("yes")) {
+
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			driver.manage().window().maximize();
-			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
-			driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
-			wait = new WebDriverWait(driver, 50);
+			driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
+			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			js = (JavascriptExecutor) driver;
 			Thread.sleep(1000);
 		}

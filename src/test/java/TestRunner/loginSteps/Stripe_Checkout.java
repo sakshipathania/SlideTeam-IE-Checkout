@@ -18,14 +18,12 @@ import io.cucumber.java.en.Then;
 
 public class Stripe_Checkout extends SetupClass {
 
-	WebDriverWait wait = new WebDriverWait(driver, 30);
-	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	@Given("^user is already on Website Home Page (\\d+)CO$")
 	public void user_is_already_on_Website_Home_Page_CO(int arg1) throws Throwable {
 
 		driver.get(AppURL);
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		
 		log.info("It's opening the website URL");
 		Thread.sleep(2000);
 
