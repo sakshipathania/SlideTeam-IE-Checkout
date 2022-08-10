@@ -56,8 +56,8 @@ public class SetupClass {
 			// driver.get("google.com");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
-			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-			wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 			js = (JavascriptExecutor) driver;
 			Thread.sleep(1000);
 		}

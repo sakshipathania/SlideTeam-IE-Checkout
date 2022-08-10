@@ -8,7 +8,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = { "." }, // tags = ("@paypal_Checkout"),
+@CucumberOptions(features = { "." }, //tags = ("@paypal_checkout"),
 		plugin = { "pretty", "html:target/cucumber-html-report", "json:target/cucumber.json",
 				"usage:target/usage.jsonx", "junit:target/cucumber.xml" }, monochrome = true)
 
