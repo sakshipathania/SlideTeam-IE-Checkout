@@ -51,9 +51,9 @@ public class SetupClass {
 			 * );
 			 */
 
-			//driver = new EdgeDriver(options);
+			// driver = new EdgeDriver(options);
 			driver = new EdgeDriver();
-			//driver.get("google.com");
+			// driver.get("google.com");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
@@ -69,10 +69,18 @@ public class SetupClass {
 
 	}
 
+	public static void ClearBrowserCache() throws Throwable {
+
+		driver.manage().deleteAllCookies();
+		Thread.sleep(4000); // wait 7 seconds to clear cookies.
+		driver.navigate().refresh();
+		Thread.sleep(3000);
+	}
+
 	@AfterClass
 	public static void after_Class() {
 		try {
-			//driver.quit();
+			// driver.quit();
 			Thread.sleep(2000);
 		} catch (Exception closeBrowser) {
 
