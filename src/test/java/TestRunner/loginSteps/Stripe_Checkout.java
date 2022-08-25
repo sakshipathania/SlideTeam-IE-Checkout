@@ -18,12 +18,11 @@ import io.cucumber.java.en.Then;
 
 public class Stripe_Checkout extends SetupClass {
 
-
 	@Given("^user is already on Website Home Page (\\d+)CO$")
 	public void user_is_already_on_Website_Home_Page_CO(int arg1) throws Throwable {
 		Thread.sleep(10000);
 		driver.get(AppURL);
-		
+
 		log.info("It's opening the website URL");
 		Thread.sleep(2000);
 
@@ -723,11 +722,11 @@ public class Stripe_Checkout extends SetupClass {
 		// account.click();
 		Thread.sleep(3000);
 
-		WebElement delete_account = wait
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#clicking")));
+		WebElement delete_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#clicking")));
 		Thread.sleep(3000);
-		//js.executeScript("arguments[0].scrollIntoView();", delete_account);
-		delete_account.click();
+		// js.executeScript("arguments[0].scrollIntoView();", delete_account);
+		js.executeScript("arguments[0].click();", delete_account);
+
 		Thread.sleep(3000);
 		WebElement delete_reason = wait
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#exampleRadios1")));
