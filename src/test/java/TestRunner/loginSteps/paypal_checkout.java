@@ -637,15 +637,13 @@ public class paypal_checkout extends SetupClass {
 		WebElement account = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'My Account')]")));
 		js.executeScript("arguments[0].click();", account);
-		
-		
-		driver.navigate().refresh();
-		Thread.sleep(3000);
+	
 
 		WebElement delete_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#clicking")));
 		Thread.sleep(3000);
 		// js.executeScript("arguments[0].scrollIntoView();", delete_account);
-		delete_account.click();
+		js.executeScript("arguments[0].click();", delete_account);	
+		
 		Thread.sleep(3000);
 		WebElement delete_reason = driver.findElement(By.cssSelector("#exampleRadios1"));
 		js.executeScript("arguments[0].scrollIntoView();", delete_reason);
