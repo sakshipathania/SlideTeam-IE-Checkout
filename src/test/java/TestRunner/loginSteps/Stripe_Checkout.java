@@ -716,17 +716,21 @@ public class Stripe_Checkout extends SetupClass {
 	public void user_deleted_the_account_CO(int arg1) throws Throwable {
 		Thread.sleep(3000);
 
-		WebElement account = driver.findElement(By.xpath("//a[contains(.,'My Account')]"));
+		WebElement account = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'My Account')]")));
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].click();", account);
 		// account.click();
 		Thread.sleep(3000);
 
-		WebElement delete_account = driver.findElement(By.cssSelector("#clicking"));
-		js.executeScript("arguments[0].scrollIntoView();", delete_account);
+		WebElement delete_account = wait
+				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#clicking")));
+		Thread.sleep(3000);
+		//js.executeScript("arguments[0].scrollIntoView();", delete_account);
 		delete_account.click();
 		Thread.sleep(3000);
-		WebElement delete_reason = driver.findElement(By.cssSelector("#exampleRadios1"));
+		WebElement delete_reason = wait
+				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#exampleRadios1")));
 		Thread.sleep(3000);
 		delete_reason.click();
 		Thread.sleep(3000);
