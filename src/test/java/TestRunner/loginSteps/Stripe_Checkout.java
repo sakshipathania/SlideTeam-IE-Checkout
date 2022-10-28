@@ -717,10 +717,7 @@ public class Stripe_Checkout extends SetupClass {
 
 		WebElement account = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'My Account')]")));
-		Thread.sleep(3000);
 		js.executeScript("arguments[0].click();", account);
-		// account.click();
-		Thread.sleep(3000);
 
 		WebElement delete_account = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#clicking")));
 		Thread.sleep(3000);
@@ -728,30 +725,29 @@ public class Stripe_Checkout extends SetupClass {
 		js.executeScript("arguments[0].click();", delete_account);
 
 		Thread.sleep(3000);
-		WebElement delete_reason = wait
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#exampleRadios1")));
+		WebElement delete_reason = driver.findElement(By.cssSelector("#exampleRadios1"));
+		js.executeScript("arguments[0].scrollIntoView();", delete_reason);
 		Thread.sleep(3000);
-		delete_reason.click();
+		js.executeScript("arguments[0].click();", delete_reason);
 		Thread.sleep(3000);
 
 		WebElement delete_profile = wait
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#delete-final")));
 		js.executeScript("arguments[0].scrollIntoView();", delete_profile);
-		delete_profile.click();
+		js.executeScript("arguments[0].click();", delete_profile);
 		Thread.sleep(3000);
 
 		WebElement delete_profile_coupon = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(
 				"#flipModal > div > div > div.modal-footer.button_action > button.btn.btn-default.button_2")));
 		js.executeScript("arguments[0].scrollIntoView();", delete_profile_coupon);
 		delete_profile_coupon.click();
-		Thread.sleep(3000);
+		Thread.sleep(30000);
 		String verifyDeleteAccount = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@x-html='message.text']"))).getText();
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 		Assert.assertTrue("Account is not deleted",
 				verifyDeleteAccount.contains("Your account has been deleted successfully."));
 		System.out.println("your account delete successfully");
-
 	}
 
 }
