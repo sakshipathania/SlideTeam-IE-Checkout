@@ -660,25 +660,7 @@ public class Stripe_Checkout extends SetupClass {
 			WebElement co_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#amasty_stripe")));
 			Thread.sleep(2000);
 			co_btn.click();
-			Thread.sleep(5000);
-
-			WebElement Stripe_name = wait
-					.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#stripe-name")));
-			Thread.sleep(2000);
-			Stripe_name.sendKeys("QA");
-			Thread.sleep(5000);
-
-			WebElement Stripe_email = wait
-					.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#stripe-email")));
-			Thread.sleep(2000);
-			Stripe_email.sendKeys("sakshi.pathania@slidetech.in");
-			Thread.sleep(5000);
-
-			WebElement Stripe_card = driver.findElement(By.className("InputElement is-empty Input Input--empty"));
-			Thread.sleep(2000);
-			Stripe_card.sendKeys("4242424242424242");
-			Thread.sleep(5000);
-			// Stripe_card.clear();
+			Thread.sleep(3000);
 		} catch (NoSuchElementException popup) {
 		}
 		Thread.sleep(5000);
@@ -693,18 +675,22 @@ public class Stripe_Checkout extends SetupClass {
 			place_order_btn.click();
 			Thread.sleep(5000);
 
-			String co_page_title = driver.getTitle();
+			// verify the price
+			WebElement price = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='$149.99']")));
+
+			Assert.assertTrue("price does not match", price.getText().equals("$149.99"));
+
+			// verify title
+			String expectedTitle = driver.getTitle();
 			Thread.sleep(3000);
-			System.out.println("Title of the Page is --> " + co_page_title);
+			System.out.println("Title of the Page is --> " + expectedTitle);
+			Assert.assertTrue("user is not on the stripe checkout page", expectedTitle.equals("Slideteam PTE LTD"));
 
-			String ErrorMessage = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
-					"//div[@id='checkout']//div[@data-ui-id='checkout-cart-validationmessages-message-error'][normalize-space()='Please verify you card information.']")))
-					.getText();
-			// verify the error meaasge
-			Assert.assertTrue("user is on wrong page", ErrorMessage.contains("Please verify you card information."));
-
-			// verify the Title
-			Assert.assertTrue("user is on wrong page", co_page_title.contentEquals("Checkout"));
+			// Back to checkout page
+			WebElement back_Icon = wait.until(ExpectedConditions
+					.elementToBeClickable(By.xpath("//div[@class='Header-backArrowContainer']//*[name()='svg']")));
+			back_Icon.click();
 
 		} catch (NoSuchElementException popup) {
 		}
