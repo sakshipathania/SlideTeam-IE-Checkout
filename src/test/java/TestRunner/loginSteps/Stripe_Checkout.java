@@ -712,15 +712,16 @@ public class Stripe_Checkout extends SetupClass {
 		Thread.sleep(3000);
 		// js.executeScript("arguments[0].scrollIntoView();", delete_account);
 		js.executeScript("arguments[0].click();", delete_account);
-
+		
 		Thread.sleep(3000);
-		WebElement delete_reason = driver.findElement(By.cssSelector("input#exampleRadios1"));
+		WebElement delete_reason = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input#exampleRadios1")));
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].click();", delete_reason);
 		Thread.sleep(3000);
 
 		WebElement delete_profile = wait
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button#delete-final")));
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button#delete-final")));
 		js.executeScript("arguments[0].click();", delete_profile);
 		Thread.sleep(3000);
 
