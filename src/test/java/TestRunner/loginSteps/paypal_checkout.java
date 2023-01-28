@@ -640,12 +640,16 @@ public class paypal_checkout extends SetupClass {
 		Thread.sleep(3000);
 
 		WebElement delete_account = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='clicking']")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='clicking']")));
 		Thread.sleep(3000);
 		// js.executeScript("arguments[0].scrollIntoView();", delete_account);
 		js.executeScript("arguments[0].click();", delete_account);
 
 		Thread.sleep(3000);
+		boolean deletePopUp = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input#exampleRadios1")))
+				.isDisplayed();
+		Assert.assertTrue("Delete pop-up was not dispalyed", deletePopUp);
 		WebElement delete_reason = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input#exampleRadios1")));
 		Thread.sleep(3000);
