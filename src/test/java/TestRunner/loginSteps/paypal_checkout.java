@@ -596,11 +596,11 @@ public class paypal_checkout extends SetupClass {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'My Account')]")));
 		account.click();
 		Thread.sleep(5000);
-
+		chatWindow();
 		WebElement delete_account = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@id, 'clicking')]/self::a")));
 		Thread.sleep(4000);
-		js.executeScript("arguments[0].click();", delete_account);
+		delete_account.click();
 
 		Thread.sleep(3000);
 		System.out.println("delete element has been clicked ");

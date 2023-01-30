@@ -8,13 +8,16 @@ import java.util.logging.Logger;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -67,6 +70,33 @@ public class SetupClass {
 			System.out.println("platform does not provide");
 		}
 
+	}
+
+	public static void chatWindow() throws Throwable {
+
+		try {
+			WebElement iframe = driver.findElement(By.xpath("//iframe[@id = 'chat-widget' or @name = 'chat-widget']"));
+			Thread.sleep(1000);
+			boolean value = iframe.isDisplayed();
+			System.out.println("value = " + value);
+			if (value == true) {
+				driver.switchTo().frame(iframe);
+				WebElement chat1 = wait
+						.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".lc-1do0yxw >.lc-13bzjso ")));
+				Thread.sleep(1000);
+				chat1.click();
+				Thread.sleep(1000);
+				driver.switchTo().defaultContent();
+				Thread.sleep(1000);
+				driver.switchTo().parentFrame();
+				Thread.sleep(3000);
+			} else {
+
+				System.out.println("chat window does not open");
+			}
+		} catch (NoSuchElementException NCP) {
+
+		}
 	}
 
 	public static void ClearBrowserCache() throws Throwable {

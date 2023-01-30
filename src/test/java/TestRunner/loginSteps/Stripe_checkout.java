@@ -567,12 +567,12 @@ public class Stripe_checkout extends SetupClass {
 		WebElement account = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'My Account')]")));
 		account.click();
-		Thread.sleep(5000);
-
+		Thread.sleep(3000);
+		chatWindow();
 		WebElement delete_account = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@id, 'clicking')]/self::a")));
 		Thread.sleep(3000);
-		js.executeScript("arguments[0].click();", delete_account);
+		delete_account.click();
 
 		System.out.println("delete element has been clicked ");
 		Thread.sleep(3000);
