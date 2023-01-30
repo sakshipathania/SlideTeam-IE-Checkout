@@ -563,14 +563,14 @@ public class Stripe_checkout extends SetupClass {
 
 	@Then("^user deleted the account (\\d+)CO$")
 	public void user_deleted_the_account_CO(int arg1) throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		WebElement account = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'My Account')]")));
 		account.click();
 		Thread.sleep(5000);
 
-		WebElement delete_account = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@id, 'clicking')]/self::a")));
+		WebElement delete_account = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@id, 'clicking')]/self::a")));
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].click();", delete_account);
 

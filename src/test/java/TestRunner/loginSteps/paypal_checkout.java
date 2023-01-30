@@ -597,9 +597,9 @@ public class paypal_checkout extends SetupClass {
 		account.click();
 		Thread.sleep(5000);
 
-		WebElement delete_account = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@id, 'clicking')]/self::a")));
-		Thread.sleep(3000);
+		WebElement delete_account = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@id, 'clicking')]/self::a")));
+		Thread.sleep(4000);
 		js.executeScript("arguments[0].click();", delete_account);
 
 		Thread.sleep(3000);
