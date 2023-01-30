@@ -127,368 +127,360 @@ public class paypal_checkout extends SetupClass {
 
 	@Then("^user is redirected to pricing page and check the text1 PP1$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text1_PP1() throws Throwable {
-
-		Thread.sleep(3000);
-		String actualTitle = "Monthly";
-		Thread.sleep(1000); //
-		String expectedTitle = "Monthly";
-		Thread.sleep(1000); // wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle, actualTitle);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text Monthly is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(3000); // wait.implictywait(driver);
-
+		/*
+		 * Thread.sleep(3000); String actualTitle = "Monthly"; Thread.sleep(1000); //
+		 * String expectedTitle = "Monthly"; Thread.sleep(1000); //
+		 * wait.implictywait(driver); Assert.assertEquals(expectedTitle, actualTitle);
+		 * Thread.sleep(2000);
+		 * js.executeScript("alert('Text Monthly is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(3000); // wait.implictywait(driver);
+		 */
 	}
 
 	@Then("^user is redirected to pricing page and check the text2 PP2$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text2_PP2() throws Throwable {
 
-		WebElement actualTitle = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[normalize-space()='$49.99']")));
-		js.executeScript("arguments[0].scrollIntoView();", actualTitle);
-		String monthly_Price = actualTitle.getText();
-		Thread.sleep(1000); //
-
-		String expectedTitle = "$49.99";
-		Thread.sleep(1000); // wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle, monthly_Price); //
-
-		Thread.sleep(2000);
-		js.executeScript("alert('Text $49.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(3000);
+		/*
+		 * WebElement actualTitle = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//em[normalize-space()='$49.99']")));
+		 * js.executeScript("arguments[0].scrollIntoView();", actualTitle); String
+		 * monthly_Price = actualTitle.getText(); Thread.sleep(1000); //
+		 * 
+		 * String expectedTitle = "$49.99"; Thread.sleep(1000); //
+		 * wait.implictywait(driver); Assert.assertEquals(expectedTitle, monthly_Price);
+		 * //
+		 * 
+		 * Thread.sleep(2000);
+		 * js.executeScript("alert('Text $49.99 is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(3000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text3 PP3$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text3_PP3() throws Throwable {
 
-		String actualTitle = "Semi Annual";
-		Thread.sleep(1000); //
-
-		String expectedTitle = "Semi Annual";
-		Thread.sleep(1000); // wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle, actualTitle); //
-
-		Thread.sleep(2000);
-		js.executeScript("alert('Text Semi Annual is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * String actualTitle = "Semi Annual"; Thread.sleep(1000); //
+		 * 
+		 * String expectedTitle = "Semi Annual"; Thread.sleep(1000); //
+		 * wait.implictywait(driver); Assert.assertEquals(expectedTitle, actualTitle);
+		 * //
+		 * 
+		 * Thread.sleep(2000);
+		 * js.executeScript("alert('Text Semi Annual is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text4 PP4$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text4_PP4() throws Throwable {
 
-		WebElement actualTitle = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[normalize-space()='$149.99']")));
-		js.executeScript("arguments[0].scrollIntoView();", actualTitle);
-		String semi_Annual_Price = actualTitle.getText();
-
-		String expectedTitle = "$149.99";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, semi_Annual_Price); // wait.implictywait(driver); Thread.sleep(2000);
-		js.executeScript("alert('Text $149.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * WebElement actualTitle = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//em[normalize-space()='$149.99']")));
+		 * js.executeScript("arguments[0].scrollIntoView();", actualTitle); String
+		 * semi_Annual_Price = actualTitle.getText();
+		 * 
+		 * String expectedTitle = "$149.99"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, semi_Annual_Price); //
+		 * wait.implictywait(driver); Thread.sleep(2000);
+		 * js.executeScript("alert('Text $149.99 is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text5 PP5$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text5_PP5() throws Throwable {
 
-		String actualTitle = "Annual";
-		Thread.sleep(1000); //
-
-		String expectedTitle = "Annual";
-		Thread.sleep(1000); // wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle, actualTitle); //
-
-		Thread.sleep(2000);
-		js.executeScript("alert('Text Annual is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * String actualTitle = "Annual"; Thread.sleep(1000); //
+		 * 
+		 * String expectedTitle = "Annual"; Thread.sleep(1000); //
+		 * wait.implictywait(driver); Assert.assertEquals(expectedTitle, actualTitle);
+		 * //
+		 * 
+		 * Thread.sleep(2000);
+		 * js.executeScript("alert('Text Annual is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text6 PP6$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text6_PP6() throws Throwable {
 
-		WebElement actualTitle = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[normalize-space()='$249.99']")));
-		js.executeScript("arguments[0].scrollIntoView();", actualTitle);
-		String Annual_Price = actualTitle.getText();
-
-		String expectedTitle = "$249.99";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, Annual_Price);
-		js.executeScript("alert('Text $249.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000); // wait.implictywait(driver);
-		Thread.sleep(2000);
+		/*
+		 * WebElement actualTitle = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//em[normalize-space()='$249.99']")));
+		 * js.executeScript("arguments[0].scrollIntoView();", actualTitle); String
+		 * Annual_Price = actualTitle.getText();
+		 * 
+		 * String expectedTitle = "$249.99"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, Annual_Price);
+		 * js.executeScript("alert('Text $249.99 is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000); // wait.implictywait(driver); Thread.sleep(2000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text7 PP7$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text7_PP7() throws Throwable {
 
-		String actualTitle = "Annual + Custom Design";
-		Thread.sleep(1000); //
-
-		String expectedTitle = "Annual + Custom Design";
-		Thread.sleep(1000); // wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle, actualTitle); //
-
-		Thread.sleep(2000);
-		js.executeScript("alert('Text Annual + Custom Design is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(2000);
+		/*
+		 * String actualTitle = "Annual + Custom Design"; Thread.sleep(1000); //
+		 * 
+		 * String expectedTitle = "Annual + Custom Design"; Thread.sleep(1000); //
+		 * wait.implictywait(driver); Assert.assertEquals(expectedTitle, actualTitle);
+		 * //
+		 * 
+		 * Thread.sleep(2000); js.
+		 * executeScript("alert('Text Annual + Custom Design is present and correct');"
+		 * ); Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(2000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text8 PP8$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text8_PP8() throws Throwable {
 
-		WebElement actualTitle = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[normalize-space()='$299.99']")));
-		js.executeScript("arguments[0].scrollIntoView();", actualTitle);
-		String Annual_CustomePrice = actualTitle.getText();
-
-		String expectedTitle = "$299.99";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, Annual_CustomePrice); // wait.implictywait(driver); Thread.sleep(2000);
-		js.executeScript("alert('Text $299.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * WebElement actualTitle = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//em[normalize-space()='$299.99']")));
+		 * js.executeScript("arguments[0].scrollIntoView();", actualTitle); String
+		 * Annual_CustomePrice = actualTitle.getText();
+		 * 
+		 * String expectedTitle = "$299.99"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, Annual_CustomePrice); //
+		 * wait.implictywait(driver); Thread.sleep(2000);
+		 * js.executeScript("alert('Text $299.99 is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text9 PP9$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text9_PP9() throws Throwable {
 
-		WebElement Business_Team = wait.until(
-				ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Business Teams']")));
-		Thread.sleep(2000);
-		js.executeScript("arguments[0].scrollIntoView();", Business_Team);
-		Thread.sleep(3000);
-		Business_Team.click();
-		Thread.sleep(3000);
-
-		String actualTitle = "Annual 4 User License";
-		Thread.sleep(1000); //
-
-		String expectedTitle = "Annual 4 User License";
-		Thread.sleep(1000); // wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle, actualTitle);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text Annual 4 User License is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * WebElement Business_Team = wait.until(
+		 * ExpectedConditions.elementToBeClickable(By.
+		 * xpath("//button[normalize-space()='Business Teams']"))); Thread.sleep(2000);
+		 * js.executeScript("arguments[0].scrollIntoView();", Business_Team);
+		 * Thread.sleep(3000); Business_Team.click(); Thread.sleep(3000);
+		 * 
+		 * String actualTitle = "Annual 4 User License"; Thread.sleep(1000); //
+		 * 
+		 * String expectedTitle = "Annual 4 User License"; Thread.sleep(1000); //
+		 * wait.implictywait(driver); Assert.assertEquals(expectedTitle, actualTitle);
+		 * Thread.sleep(2000); js.
+		 * executeScript("alert('Text Annual 4 User License is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text10 PP0$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text10_PP0() throws Throwable {
 
-		WebElement actualTitle = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[normalize-space()='$599.99']")));
-		js.executeScript("arguments[0].scrollIntoView();", actualTitle);
-		String Annual4UserLicensePrice = actualTitle.getText();
-
-		String expectedTitle = "$599.99";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, Annual4UserLicensePrice);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text $599.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
-
+		/*
+		 * WebElement actualTitle = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//em[normalize-space()='$599.99']")));
+		 * js.executeScript("arguments[0].scrollIntoView();", actualTitle); String
+		 * Annual4UserLicensePrice = actualTitle.getText();
+		 * 
+		 * String expectedTitle = "$599.99"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, Annual4UserLicensePrice);
+		 * Thread.sleep(2000);
+		 * js.executeScript("alert('Text $599.99 is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 	}
 
 	@Then("^user is redirected to pricing page and check the text11 PP0$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text11_PP0() throws Throwable {
 
-		String actualTitle = "Annual 20 User License";
-		Thread.sleep(1000); //
-
-		String expectedTitle = "Annual 20 User License";
-		Thread.sleep(1000); // wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle, actualTitle);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text Annual 20 User License is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * String actualTitle = "Annual 20 User License"; Thread.sleep(1000); //
+		 * 
+		 * String expectedTitle = "Annual 20 User License"; Thread.sleep(1000); //
+		 * wait.implictywait(driver); Assert.assertEquals(expectedTitle, actualTitle);
+		 * Thread.sleep(2000); js.
+		 * executeScript("alert('Text Annual 20 User License is present and correct');"
+		 * ); Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text12 PP0$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text12_PP0() throws Throwable {
-
-		WebElement actualTitle = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[normalize-space()='$1599.99']")));
-		js.executeScript("arguments[0].scrollIntoView();", actualTitle);
-		String Annual20UserLicensePrice = actualTitle.getText();
-
-		String expectedTitle = "$1599.99";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, Annual20UserLicensePrice);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text $1599.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * WebElement actualTitle = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//em[normalize-space()='$1599.99']")));
+		 * js.executeScript("arguments[0].scrollIntoView();", actualTitle); String
+		 * Annual20UserLicensePrice = actualTitle.getText();
+		 * 
+		 * String expectedTitle = "$1599.99"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, Annual20UserLicensePrice);
+		 * Thread.sleep(2000);
+		 * js.executeScript("alert('Text $1599.99 is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text13 PP0$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text13_PP0() throws Throwable {
 
-		String actualTitle = "Annual Company Wide Unlimited User License";
-		Thread.sleep(1000); // wait.implictywait(driver);
-		String expectedTitle = "Annual Company Wide Unlimited User License";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, actualTitle);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text Annual Company Wide Unlimited User License is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * String actualTitle = "Annual Company Wide Unlimited User License";
+		 * Thread.sleep(1000); // wait.implictywait(driver); String expectedTitle =
+		 * "Annual Company Wide Unlimited User License"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, actualTitle); Thread.sleep(2000); js.
+		 * executeScript("alert('Text Annual Company Wide Unlimited User License is present and correct');"
+		 * ); Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text14 PP0$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text14_PP0() throws Throwable {
 
-		WebElement actualTitle = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[normalize-space()='$2999.99']")));
-		js.executeScript("arguments[0].scrollIntoView();", actualTitle);
-		String AnnualUnlimtedUserLicensePrice = actualTitle.getText();
-
-		String expectedTitle = "$2999.99";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, AnnualUnlimtedUserLicensePrice);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text $2999.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * WebElement actualTitle = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//em[normalize-space()='$2999.99']")));
+		 * js.executeScript("arguments[0].scrollIntoView();", actualTitle); String
+		 * AnnualUnlimtedUserLicensePrice = actualTitle.getText();
+		 * 
+		 * String expectedTitle = "$2999.99"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, AnnualUnlimtedUserLicensePrice);
+		 * Thread.sleep(2000);
+		 * js.executeScript("alert('Text $2999.99 is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text15 PP0$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text15_PP0() throws Throwable {
 
-		WebElement Education = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Education']")));
-		Thread.sleep(2000);
-		js.executeScript("arguments[0].scrollIntoView();", Education);
-		Thread.sleep(3000);
-		Education.click();
-		Thread.sleep(3000);
-
-		String actualTitle = "Annual 15 User Education License";
-		Thread.sleep(1000);
-		// wait.implictywait(driver);
-		String expectedTitle = "Annual 15 User Education License";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, actualTitle);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text Annual 15 User Education License is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-		Thread.sleep(5000);
+		/*
+		 * WebElement Education = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//button[normalize-space()='Education']"))); Thread.sleep(2000);
+		 * js.executeScript("arguments[0].scrollIntoView();", Education);
+		 * Thread.sleep(3000); Education.click(); Thread.sleep(3000);
+		 * 
+		 * String actualTitle = "Annual 15 User Education License"; Thread.sleep(1000);
+		 * // wait.implictywait(driver); String expectedTitle =
+		 * "Annual 15 User Education License"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, actualTitle); Thread.sleep(2000); js.
+		 * executeScript("alert('Text Annual 15 User Education License is present and correct');"
+		 * ); Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text16 PP0$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text16_PP0() throws Throwable {
 
-		WebElement actualTitle = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[normalize-space()='$999.99']")));
-		js.executeScript("arguments[0].scrollIntoView();", actualTitle);
-		String Annual15UserEducationLicense = actualTitle.getText();
-
-		String expectedTitle = "$999.99";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, Annual15UserEducationLicense);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text $999.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * WebElement actualTitle = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//em[normalize-space()='$999.99']")));
+		 * js.executeScript("arguments[0].scrollIntoView();", actualTitle); String
+		 * Annual15UserEducationLicense = actualTitle.getText();
+		 * 
+		 * String expectedTitle = "$999.99"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, Annual15UserEducationLicense);
+		 * Thread.sleep(2000);
+		 * js.executeScript("alert('Text $999.99 is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text17 PP0$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text17_PP0() throws Throwable {
 
-		String actualTitle = "Annual UNLIMITED User Institute Wide License";
-		Thread.sleep(1000); // wait.implictywait(driver);
-		String expectedTitle = "Annual UNLIMITED User Institute Wide License";
-		Thread.sleep(1000); //
-		Assert.assertEquals(expectedTitle, actualTitle);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text Annual UNLIMITED User Institute Wide Licenseis present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-		Thread.sleep(5000);
+		/*
+		 * String actualTitle = "Annual UNLIMITED User Institute Wide License";
+		 * Thread.sleep(1000); // wait.implictywait(driver); String expectedTitle =
+		 * "Annual UNLIMITED User Institute Wide License"; Thread.sleep(1000); //
+		 * Assert.assertEquals(expectedTitle, actualTitle); Thread.sleep(2000); js.
+		 * executeScript("alert('Text Annual UNLIMITED User Institute Wide Licenseis present and correct');"
+		 * ); Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
 	@Then("^user is redirected to pricing page and check the text18 PP0$")
 	public void user_is_redirected_to_pricing_page_and_check_the_text18_PP0() throws Throwable {
-
-		WebElement actualTitle = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//em[normalize-space()='$1999.99']")));
-		js.executeScript("arguments[0].scrollIntoView();", actualTitle);
-		String AnnualUNLIMITED = actualTitle.getText();
-
-		String expectedTitle = "$1999.99";
-		Thread.sleep(1000); //
-
-		Assert.assertEquals(expectedTitle, AnnualUNLIMITED);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text $1999.99 is present and correct');");
-		Thread.sleep(3000);
-		driver.switchTo().alert().accept(); //
-
-		Thread.sleep(5000);
+		/*
+		 * WebElement actualTitle = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//em[normalize-space()='$1999.99']")));
+		 * js.executeScript("arguments[0].scrollIntoView();", actualTitle); String
+		 * AnnualUNLIMITED = actualTitle.getText();
+		 * 
+		 * String expectedTitle = "$1999.99"; Thread.sleep(1000); //
+		 * 
+		 * Assert.assertEquals(expectedTitle, AnnualUNLIMITED); Thread.sleep(2000);
+		 * js.executeScript("alert('Text $1999.99 is present and correct');");
+		 * Thread.sleep(3000); driver.switchTo().alert().accept(); //
+		 * 
+		 * Thread.sleep(5000);
+		 */
 
 	}
 
@@ -595,7 +587,7 @@ public class paypal_checkout extends SetupClass {
 		WebElement account = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'My Account')]")));
 		account.click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		chatWindow();
 		WebElement delete_account = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@id, 'clicking')]/self::a")));

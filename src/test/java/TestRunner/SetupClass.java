@@ -82,7 +82,7 @@ public class SetupClass {
 			if (value == true) {
 				driver.switchTo().frame(iframe);
 				WebElement chat1 = wait
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".lc-1do0yxw >.lc-13bzjso")));
+						.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role = 'main']//button[@aria-label = 'Minimize window']")));
 				Thread.sleep(1000);
 				chat1.click();
 				Thread.sleep(1000);
