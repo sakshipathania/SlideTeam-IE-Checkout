@@ -82,7 +82,7 @@ public class SetupClass {
 			if (value == true) {
 				driver.switchTo().frame(iframe);
 				WebElement chat1 = wait
-						.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".lc-1do0yxw >.lc-13bzjso ")));
+						.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".lc-1do0yxw >.lc-13bzjso")));
 				Thread.sleep(1000);
 				chat1.click();
 				Thread.sleep(1000);
