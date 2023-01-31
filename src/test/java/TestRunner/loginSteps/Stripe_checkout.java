@@ -568,6 +568,7 @@ public class Stripe_checkout extends SetupClass {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'My Account')]")));
 		account.click();
 		Thread.sleep(3000);
+		driver.navigate().refresh();
 		chatWindow();
 		WebElement delete_account = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@id, 'clicking')]/self::a")));
@@ -597,7 +598,7 @@ public class Stripe_checkout extends SetupClass {
 				ExpectedConditions.elementToBeClickable(By.xpath("//button[@class = 'btn btn-default button_2']")));
 		delete_profile_coupon.click();
 		Thread.sleep(3000);
-		
+
 		String verifyDeleteAccount = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@x-html='message.text']"))).getText();
 		Thread.sleep(3000);
