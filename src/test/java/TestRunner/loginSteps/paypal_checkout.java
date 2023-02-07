@@ -514,11 +514,10 @@ public class paypal_checkout extends SetupClass {
 
 	@Then("^user is redirected to checkout page pp$")
 	public void user_is_redirected_to_checkout_page_pp() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		try {
 			WebElement paypalOption = wait.until(ExpectedConditions
-					.elementToBeClickable(By.xpath("//input[@id='paypal_express' or @value = 'paypal_express']")));
-
+					.elementToBeClickable(By.cssSelector(".payment-method-title >#paypal_express")));
 			paypalOption.click();
 		} catch (Exception e) {
 			// TODO: handle exception
